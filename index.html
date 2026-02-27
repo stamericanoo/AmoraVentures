@@ -1,1 +1,324 @@
-.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amora Ventures | Sulfuric Acid Plant Design</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+
+body{
+margin:0;
+font-family:'Poppins',sans-serif;
+background:#0b132b;
+color:white;
+scroll-behavior:smooth;
+}
+
+section{
+padding:120px 8%;
+border-bottom:1px solid rgba(255,255,255,0.05);
+}
+
+h1,h2,h3{
+color:#ff4d6d;
+margin-bottom:20px;
+}
+
+.hero{
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+background:linear-gradient(135deg,#1b1f3b,#6b0f1a);
+}
+
+.card{
+background:rgba(255,255,255,0.05);
+padding:40px;
+border-radius:15px;
+margin-top:30px;
+line-height:1.9;
+}
+
+table{
+width:100%;
+margin-top:30px;
+border-collapse:collapse;
+}
+
+th,td{
+border:1px solid rgba(255,255,255,0.1);
+padding:12px;
+}
+
+canvas{
+margin-top:40px;
+background:white;
+padding:20px;
+border-radius:12px;
+}
+
+.team-section{
+background:linear-gradient(135deg,#1b1f3b,#6b0f1a);
+text-align:center;
+}
+
+.team-grid{
+display:flex;
+justify-content:center;
+gap:40px;
+flex-wrap:wrap;
+margin-top:40px;
+}
+
+.team-card{
+background:rgba(255,255,255,0.08);
+padding:40px;
+border-radius:20px;
+width:260px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+<h1>AMORA VENTURES</h1>
+<h2>Sulfuric Acid Plant – 1000 TPD</h2>
+<p>Comprehensive Industrial Process & Economic Feasibility Study</p>
+</section>
+
+<!-- EXECUTIVE -->
+<section>
+<h2>Executive Summary</h2>
+<div class="card">
+<p>
+This project presents the full industrial-scale design of a Sulfuric Acid plant
+with a production capacity of 1000 tons per day using the Contact Process.
+The study integrates chemical reaction engineering,
+mass and energy balance, equipment design considerations,
+capital investment estimation, operational cost analysis,
+and long-term financial feasibility evaluation.
+</p>
+
+<p>
+The plant operates 330 days per year and achieves approximately
+98% overall conversion efficiency using a multi-bed V₂O₅ catalytic system.
+Heat recovery integration ensures optimized energy efficiency
+while minimizing operational cost.
+</p>
+</div>
+</section>
+
+<!-- UNIT 1 -->
+<section>
+<h2>1. Sulfur Burning Furnace</h2>
+<div class="card">
+<p>Main Reaction: S + O₂ → SO₂</p>
+<p>
+Operating Temperature: 900–1100°C  
+Pressure: Slightly above atmospheric  
+Conversion Efficiency: >99%
+</p>
+
+<p>
+This highly exothermic reaction releases approximately -296 kJ/mol.
+Heat is recovered through waste heat boilers generating steam.
+</p>
+</div>
+
+<table>
+<tr><th>Parameter</th><th>Value</th></tr>
+<tr><td>Temperature</td><td>1000°C</td></tr>
+<tr><td>Pressure</td><td>1.2 atm</td></tr>
+<tr><td>Air Excess</td><td>10%</td></tr>
+<tr><td>SO₂ Output</td><td>~5.6 M mol/day</td></tr>
+</table>
+
+<canvas id="chart1"></canvas>
+</section>
+
+<!-- UNIT 2 -->
+<section>
+<h2>2. Gas Cleaning & Drying</h2>
+<div class="card">
+<p>
+The SO₂ gas stream is cooled to 40–80°C.
+Dust and impurities are removed using cyclones and electrostatic precipitators.
+Moisture removal is critical to prevent acid mist formation.
+</p>
+</div>
+</section>
+
+<!-- UNIT 3 -->
+<section>
+<h2>3. Catalytic Converter</h2>
+<div class="card">
+<p>2SO₂ + O₂ ⇌ 2SO₃</p>
+<p>
+Temperature: 420–450°C  
+Pressure: 1–2 atm  
+Catalyst: V₂O₅  
+Efficiency: 96–98%
+</p>
+
+<p>
+The reaction is reversible and exothermic.
+Temperature control ensures equilibrium shift toward SO₃ formation.
+</p>
+</div>
+
+<canvas id="chart2"></canvas>
+</section>
+
+<!-- UNIT 4 -->
+<section>
+<h2>4. Absorption Tower</h2>
+<div class="card">
+<p>
+SO₃ is absorbed into concentrated sulfuric acid to form oleum:
+SO₃ + H₂SO₄ → H₂S₂O₇
+</p>
+<p>
+Operating Temperature: 60–80°C  
+Pressure: Atmospheric
+</p>
+</div>
+</section>
+
+<!-- UNIT 5 -->
+<section>
+<h2>5. Dilution & Final Product Formation</h2>
+<div class="card">
+<p>
+H₂S₂O₇ + H₂O → 2H₂SO₄  
+Highly exothermic hydration reaction.
+Cooling systems prevent overheating.
+</p>
+</div>
+</section>
+
+<!-- STOICHIOMETRY -->
+<section>
+<h2>Stoichiometric Requirement</h2>
+
+<table>
+<tr><th>Material</th><th>Ton/Day</th></tr>
+<tr><td>Sulfur</td><td>181</td></tr>
+<tr><td>Oxygen</td><td>266.98</td></tr>
+<tr><td>Water</td><td>93.6</td></tr>
+<tr><td>Product</td><td>1000</td></tr>
+</table>
+</section>
+
+<!-- ECONOMICS -->
+<section>
+<h2>Economic Evaluation</h2>
+
+<table>
+<tr><th>Item</th><th>Value</th></tr>
+<tr><td>Total Capital Investment</td><td>Rp 1.127 Trillion</td></tr>
+<tr><td>Annual Revenue</td><td>Rp 660 Billion</td></tr>
+<tr><td>Total Production Cost</td><td>Rp 538.8 Billion</td></tr>
+<tr><td>Net Profit</td><td>Rp 94.5 Billion</td></tr>
+<tr><td>Payback Period</td><td>10.3 Years</td></tr>
+<tr><td>IRR</td><td>~18%</td></tr>
+</table>
+
+<canvas id="chart3"></canvas>
+</section>
+
+<!-- SENSITIVITY -->
+<section>
+<h2>Sensitivity Analysis</h2>
+<div class="card">
+<p>
+Sulfur price fluctuation and conversion efficiency significantly affect IRR.
++10% sulfur cost reduces IRR to ~15%.
+Improved efficiency increases profitability.
+</p>
+</div>
+</section>
+
+<!-- ENVIRONMENT -->
+<section>
+<h2>Environmental & Safety Analysis</h2>
+<div class="card">
+<p>
+Emission control systems ensure SO₂ emissions below 200 mg/Nm³.
+Double absorption minimizes environmental impact.
+Safety systems include pressure relief valves,
+temperature monitoring, and emergency scrubbers.
+</p>
+</div>
+</section>
+
+<!-- TEAM -->
+<section class="team-section">
+<h2>Project Team</h2>
+<div class="team-grid">
+<div class="team-card">
+<h3>Jovita</h3>
+<p>Process Design & Mass Balance</p>
+</div>
+
+<div class="team-card">
+<h3>Siha</h3>
+<p>Economic Analysis & BEP</p>
+</div>
+
+<div class="team-card">
+<h3>Keysha</h3>
+<p>Equipment & Technical Specification</p>
+</div>
+</div>
+</section>
+
+<script>
+
+new Chart(document.getElementById('chart1'),{
+type:'line',
+data:{
+labels:['800','900','1000','1100'],
+datasets:[{
+label:'SO₂ Formation (%)',
+data:[80,95,99,99.5],
+borderColor:'#ff4d6d'
+}]
+}
+});
+
+new Chart(document.getElementById('chart2'),{
+type:'line',
+data:{
+labels:['350','400','450','500'],
+datasets:[{
+label:'SO₂ Conversion (%)',
+data:[85,94,98,92],
+borderColor:'#6b0f1a'
+}]
+}
+});
+
+new Chart(document.getElementById('chart3'),{
+type:'line',
+data:{
+labels:['Year1','Year2','Year3','Year4','Year5'],
+datasets:[{
+label:'Cumulative Cashflow (Billion IDR)',
+data:[-1100,-900,-650,-300,200],
+borderColor:'#ff4d6d'
+}]
+}
+});
+
+</script>
+
+</body>
+</html>
